@@ -1,0 +1,19 @@
+{
+  "name": "frontend-adv",
+  "version": "1.0.0",
+  "description": "educational project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OZida/FrontendAdv.CreatingCMSandContent.git"
+  },
+  "author": "OZida",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OZida/FrontendAdv.CreatingCMSandContent/issues"
+  },
+  "homepage": "https://github.com/OZida/FrontendAdv.CreatingCMSandContent#readme"
+}
