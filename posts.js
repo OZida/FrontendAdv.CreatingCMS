@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -79,85 +79,29 @@
 
 
 /***/ }),
-/* 1 */
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__controllers_builderCtrl_js__ = __webpack_require__(2);
-// var newDiv = document.createElement('div');
-// 	newDiv.id = 'questionary';
-// 	newDiv.style.backgroundColor = '#8FBC8F';
-// 	newDiv.style.width = '980px';
-// 	newDiv.style.height = '500px';
-// 	newDiv.style.margin = '0 auto';
-// 	newDiv.style.fontSize = '19px';
-// 	document.body.appendChild(newDiv);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__controllers_postCtrl_js__ = __webpack_require__(5);
 
-// var newTitle = document.createElement('h1');
-// 	newTitle.innerHTML = 'Questionary';
-// 	newTitle.style.margin = '0';
-// 	newTitle.style.padding = '40px 0 40px';
-// 	newTitle.style.textAlign = 'center';
-// 	document.getElementById("questionary").appendChild(newTitle);
-
-// var fotoStudent = document.createElement('img');
-// 	fotoStudent.setAttribute('src', 'img/foto.jpg');
-// 	fotoStudent.style.width = '160px';
-// 	fotoStudent.style.height = '220px';
-// 	fotoStudent.style.margin = '0 50px 15px 50px';
-// 	fotoStudent.style.float = 'left';
-// 	document.getElementById("questionary").appendChild(fotoStudent);
-
-// var nameStudent = document.createElement('p');
-// 	nameStudent.innerHTML = '<b> Student: </b> Kozlenko Juliya <br>';
-// 	nameStudent.style.textAlign = 'left';
-// 	nameStudent.style.margin = '0 15px 30px';
-// 	document.getElementById("questionary").appendChild(nameStudent);
-
-// var aboutYourself = document.createElement('ul');
-// 	aboutYourself.id = 'aboutYourself';	
-// 	aboutYourself.innerHTML = '<b> About Yourself: </b> graduated with honors:';
-// 	document.getElementById("questionary").appendChild(aboutYourself);
-
-// var courseFirst = document.createElement('li');	
-// 	courseFirst.innerHTML = 'HTML&CSS (base)'; 
-// 	courseFirst.style.margin = '15px 0 0 240px';
-// 	courseFirst.style.textDecoration = 'underline';
-// 	document.getElementById('aboutYourself').appendChild(courseFirst);
-
-// var courseSecond = document.createElement('li');	
-// 	courseSecond.innerHTML = 'JavaScript (base)';
-// 	courseSecond.style.marginLeft = '240px';
-// 	courseSecond.style.textDecoration = 'underline'; 
-// 	document.getElementById('aboutYourself').appendChild(courseSecond);
-
-// var courseThird = document.createElement('li');	
-// 	courseThird.innerHTML = 'JavaScript (adv)';
-// 	courseThird.style.marginLeft = '240px';
-// 	courseThird.style.textDecoration = 'underline';
-// 	document.getElementById('aboutYourself').appendChild(courseThird);
-
-// var courseFourth = document.createElement('li');	
-// 	courseFourth.innerHTML = 'JQuery'; 
-// 	courseFourth.style.marginLeft = '240px';
-// 	courseFourth.style.textDecoration = 'underline';
-// 	document.getElementById('aboutYourself').appendChild(courseFourth);
-
-
-__WEBPACK_IMPORTED_MODULE_0__controllers_builderCtrl_js__["a" /* default */].render();
+__WEBPACK_IMPORTED_MODULE_0__controllers_postCtrl_js__["a" /* default */].render();
 
 /***/ }),
-/* 2 */
+/* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__models_info_js__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__models_postModel_js__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__views_engine_js__ = __webpack_require__(0);
 
 
 let controller = {
-	model: __WEBPACK_IMPORTED_MODULE_0__models_info_js__["a" /* default */],
+	model: __WEBPACK_IMPORTED_MODULE_0__models_postModel_js__["a" /* default */],
 	view: __WEBPACK_IMPORTED_MODULE_1__views_engine_js__["a" /* default */],
 	work: function() {
 		let result = [],
@@ -167,8 +111,11 @@ let controller = {
 			if (el.body) {
 				html.innerHTML = el.body;
 			}
-			if (el.src) {
-				html.setAttribute('src', el.src);
+			if (el.title) {
+				html.setAttribute('title', el.title);
+			}
+			if (el.class) {
+				html.classList.add(el.class);
 			}
 			return html;
 
@@ -186,20 +133,23 @@ let controller = {
 /* harmony default export */ __webpack_exports__["a"] = (controller);
 
 /***/ }),
-/* 3 */
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony default export */ __webpack_exports__["a"] = ({
-	data: [{tag:"h1", body:'Questionary'},
-		{tag:'img', src:'./static/img/foto.jpg'},
-		{tag:'p', body:'<b>Student:</b> Kozlenko Juliya'},
-		{tag:'ul', body:'<b>About Yourself:</b> graduated with honors:'},
-		{tag:'li', body:'HTML&CSS (base)'},
-		{tag:'li', body:'JavaScript (base)'},
-		{tag:'li', body:'JavaScript (adv)'},
-		{tag:'li', body:'JQuery'}
-		]
+	data: 	[{tag:"div", body:'quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto', title:'sunt aut facere repellat provident occaecati excepturi optio reprehenderit', class:'firstSquare'},
+			{tag:"div", body:'est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla', title:'qui est esse', class:'secondSquare'},
+			{tag:"div", body:'et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut', title:'ea molestias quasi exercitationem repellat qui ipsa sit aut', class:'thirdSquare'},
+			{tag:"div", body:'ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit', title:'eum et est occaecati', class:'firstSquare'},
+			{tag:"div", body:'repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque', title:'nesciunt quas odio', class:'secondSquare'},
+			{tag:"div", body:'ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae', title:'dolorem eum magni eos aperiam quia', class:'thirdSquare'},
+			{tag:"div", body:'dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas', title:'magnam facilis autem', class:'firstSquare'},
+			{tag:"div", body:'dignissimos aperiam dolorem qui eum\nfacilis quibusdam animi sint suscipit qui sint possimus cum\nquaerat magni maiores excepturi\nipsam ut commodi dolor voluptatum modi aut vitae', title:'dolorem dolore est ipsam', class:'secondSquare'},
+			{tag:"div", body:'consectetur animi nesciunt iure dolore\nenim quia ad\nveniam autem ut quam aut nobis\net est aut quod aut provident voluptas autem voluptas', title:'nesciunt iure omnis dolorem tempora et accusantium', class:'thirdSquare'},
+			{tag:"div", body:'quo et expedita modi cum officia vel magni\ndoloribus qui repudiandae\nvero nisi sit\nquos veniam quod sed accusamus veritatis error', title:'optio molestias id quia eum', class:'rectangle'},
+			{tag:"div", body:'delectus reiciendis molestiae occaecati non minima eveniet qui voluptatibus\naccusamus in eum beatae sit\nvel qui neque voluptates ut commodi qui incidunt\nut animi commodi', title:'et ea vero quia laudantium autem', class:'rectangle'}
+			]
 });
 
 /***/ })
