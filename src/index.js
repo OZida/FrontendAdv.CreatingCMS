@@ -56,6 +56,6 @@
 // 	courseFourth.style.marginLeft = '240px';
 // 	courseFourth.style.textDecoration = 'underline';
 // 	document.getElementById('aboutYourself').appendChild(courseFourth);
-
+import './styles/styles.scss';
 import ctrl from './controllers/builderCtrl.js';
 ctrl.render();

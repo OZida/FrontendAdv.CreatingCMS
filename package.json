@@ -4,7 +4,7 @@
   "description": "educational project",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "dev" : "webpack"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/OZida/FrontendAdv.CreatingCMSandContent/issues"
   },
-  "homepage": "https://github.com/OZida/FrontendAdv.CreatingCMSandContent#readme"
+  "homepage": "https://github.com/OZida/FrontendAdv.CreatingCMSandContent#readme",
+  "dependencies": {
+    "css-loader": "^0.28.9",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.20.1"
+  }
 }
