@@ -1,0 +1,23 @@
+$first_black: #212121;
+$second_black: #E0E0E0;
+$first_red: #D50000;
+$second_red: #DD2C00;
+$first_green: #00C853;
+$second_green: #33691E;
+$first_blue: #01579B;
+$second_blue: #0091EA;
+$first_yellow: #FFD600;
+$second_yellow: #FFA000;
+
+@mixin margin ($vertical, $horisontal) {
+	margin: $vertical $horisontal;
+}
+@mixin padding ($vertical, $horisontal) {
+	padding: $vertical $horisontal;
+}
+
+.interface {
+	background-color: $second_black;
+	@include margin (10, 15);
+	@include padding (10, 10);
+}

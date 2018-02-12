@@ -1,0 +1,35 @@
+@import '_reset.scss';
+@import '_var.scss';
+
+.message {
+	@extend .interface;
+	color: $first_red;
+	background-color: $second_blue;
+	&: hover {
+		background-color: $second_red;
+	}
+}
+.success {
+	@extend .interface;
+	color: $first_green;
+	background-color: $second_yellow;
+	&: hover {
+		background-color: $second_green;
+	}
+}
+.error {
+	@extend .interface;
+	color: $first_yellow;
+	background-color: $second_red;
+	&: hover {
+		background-color: $second_yellow;
+	}
+}
+.warning {
+	@extend .interface;
+	color: $first_blue;
+	background-color: $second_green;
+	&: hover {
+		background-color: $second_blue;
+	}
+}
