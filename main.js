@@ -74,7 +74,6 @@
 
 		data.forEach(function(el){
 		document.body.appendChild(el);
-
 		})
 	}
 });
