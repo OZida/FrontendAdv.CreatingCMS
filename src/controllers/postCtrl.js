@@ -58,7 +58,6 @@ function trispile(el) {
 
             if (el.body.length) {
                 html.innerHTML = el.body.map(trispile);
-                return html;
             } 
             else {
                 html.innerHTML = trispile(el.body);
