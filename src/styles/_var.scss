@@ -1,13 +1,20 @@
-$first_black: #212121;
-$second_black: #E0E0E0;
-$first_red: #D50000;
-$second_red: #DD2C00;
-$first_green: #00C853;
-$second_green: #33691E;
-$first_blue: #01579B;
-$second_blue: #0091EA;
-$first_yellow: #FFD600;
-$second_yellow: #FFA000;
+$dark_black: #212121;
+$light_black: #E0E0E0;
+$dark_red: #BF360C;
+$light_red: #FF8A65;
+$dark_green: #1B5E20;
+$light_green: #9CCC65;
+$dark_blue: #01579B;
+$light_blue: #4FC3F7;
+$dark_yellow: #ffab40;
+$light_yellow: #FFEE58;
+
+$dark_purple: #281938; /*bg content*/
+$purple: #482e5e;	/*bg left/right content*/
+$light_purple: #c8a9ff;
+$white_purple: #b4a9b8; /*color*/
+$dark_violet: #523d66;
+$purple_hover: rgba(149, 117, 205, 0.5);
 
 @mixin margin ($vertical, $horisontal) {
 	margin: $vertical $horisontal;
@@ -17,7 +24,8 @@ $second_yellow: #FFA000;
 }
 
 .interface {
-	background-color: $second_black;
-	@include margin (10, 15);
-	@include padding (10, 10);
+	background-color: $light_black;
+	@include margin (5px, 5px);
+	@include padding (10px, 10px);
+	flex-grow: 3;
 }

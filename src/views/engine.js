@@ -1,8 +1,8 @@
 export default {
 	render: function(data) {
-		var body = document.getElementsByTagName[0]
+		var body = document.getElementsByClassName('general')[0];
 		data.forEach(function(el){
-		document.body.appendChild(el);
+			body.appendChild(el);
 		})
 	}
 };

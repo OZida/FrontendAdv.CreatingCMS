@@ -4,7 +4,7 @@
   "description": "educational project",
   "main": "index.js",
   "scripts": {
-    "dev" : "webpack"
+    "dev": "webpack"
   },
   "repository": {
     "type": "git",
