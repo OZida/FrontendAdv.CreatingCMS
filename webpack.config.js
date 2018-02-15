@@ -8,7 +8,8 @@ module.exports = {
 		filename: '[name].js',
 		path: path.resolve(__dirname,'src','build')
 	},
-	watch: true,
+	watch: true,devtool: "eval",
+
 	module: {
 		rules: [
 		{
