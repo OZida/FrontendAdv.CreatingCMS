@@ -1,4 +1,7 @@
 const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
 	entry: {
 		main: path.resolve(__dirname,'src','index.js'),
@@ -8,7 +11,8 @@ module.exports = {
 		filename: '[name].js',
 		path: path.resolve(__dirname,'src','build')
 	},
-	watch: true,devtool: "eval",
+	// watch: true,
+	devtool: "eval",
 
 	module: {
 		rules: [
@@ -29,5 +33,17 @@ module.exports = {
 			]
 		}
 		]
-	}
+	},
+	devServer: {
+		contentBase: path.join(__dirname,"dist"),
+		compress: true,
+		disableHostCheck: true,
+		port: 8080,
+		open: true,
+		hot: true
+	},
+	plugins: [
+		new webpack.HotModuleReplacementPlugin(),
+		new HtmlWebpackPlugin({template:'./index.html'})
+	]
 }
