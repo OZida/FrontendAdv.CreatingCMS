@@ -9,7 +9,7 @@ module.exports = {
 	},
 	output: {
 		filename: '[name].js',
-		path: path.resolve(__dirname,'src','build')
+		path: path.resolve(__dirname,'build')
 	},
 	// watch: true,
 	devtool: "eval",

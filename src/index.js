@@ -5,7 +5,7 @@ import ctrl1 from './controllers/clickerCtrl.js';
 import Vue from 'vue/dist/vue.min.js';
 import ctrl from './controllers/postCtrl.js';
 ctrl.render();
-// ctrl.render();
+
 
 var app = new Vue({
 	el: '#app',
@@ -30,11 +30,8 @@ var app1 = new Vue ({
 
 			    }, 3000);
 			};
-				// isActive: true;
 			this.text++;	
-	
 		}
 	}
-
 })
 
