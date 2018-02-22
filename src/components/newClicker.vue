@@ -1,0 +1,38 @@
+<template>
+	<div id="newClicker">
+		<input type="text" v-model='text'>
+		<button v-on:click='clickMe'>click me</button>
+	</div>
+</template>
+
+
+<script>
+	export default {
+		data: function() {
+			return {
+				text: 0,
+				isActive: false
+			}
+		},
+		methods: {
+			clickMe: function() {
+				if (!this.isActive) {
+					this.isActive = true;
+				    setTimeout (() =>{
+				    	this.isActive = false;
+				    	alert(this.text);
+				    	this.text = 0;
+			    	}, 3000);
+				};
+			this.text++;	
+			}
+		}
+	}
+</script>
+
+
+<style>
+	#newClicker {
+		@extend .interface_by_Vue;
+	}	
+</style>
