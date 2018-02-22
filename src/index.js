@@ -7,14 +7,14 @@ import ctrl from './controllers/postCtrl.js';
 ctrl.render();
 
 
-var app = new Vue({
-	el: '#app',
+var showMessage = new Vue({
+	el: '#showMessage',
 	data: {
 		message: 'Hi'
 	}
 })
-var app1 = new Vue ({
-	el: '#app1',
+var newClicker = new Vue ({
+	el: '#newClicker',
 	data: {
 		text: 0,
 		isActive: false
@@ -22,7 +22,7 @@ var app1 = new Vue ({
 	methods: {
 		clickMe: function() {
 			if (!this.isActive) {
-
+				this.text = 0;
 				this.isActive = true;
 			    setTimeout (() =>{
 			    	this.isActive = false;
@@ -35,3 +35,45 @@ var app1 = new Vue ({
 	}
 })
 
+Vue.component('message', {
+	template: '<input v-model="message" @keyup.enter="saveMessage">',
+	data: function() {
+		return {
+			message: '',
+		}
+	},
+	methods: {
+		saveMessage: function() {
+			this.$emit('message-saved', this.message);
+			this.message = '';
+		}
+	}
+})
+
+var toDoList = new Vue ({
+	el: '#toDoList',
+	data: {
+		lists: [
+			{text:'сделать домашнее задание',
+			isDone: false
+			},
+			{text:'приготовить ужин',
+			isDone: false
+			},
+			{text:'убрать в квартире',
+			isDone: false
+			},		
+			{text:'посмотреть фильм',
+			isDone: false
+			}
+		],
+		newLists: []
+	},
+	methods: {
+		handleMessage: function(message) {
+
+			this.newLists.push({text: message, completed: false});
+			console.log(this.newLists);
+		}
+	}
+})

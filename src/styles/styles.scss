@@ -2,7 +2,7 @@
 @import '_var.scss';
 
 .message {
-	@extend .interface;
+	@extend .interface_tile;
 	color: $dark_red;
 	background-color: $light_blue;
 	&:hover {
@@ -10,7 +10,7 @@
 	}
 }
 .success {
-	@extend .interface;
+	@extend .interface_tile;
 	color: $dark_green;
 	background-color: $light_yellow;
 	&:hover {
@@ -18,7 +18,7 @@
 	}
 }
 .error {
-	@extend .interface;
+	@extend .interface_tile;
 	color: $dark_yellow;
 	background-color: $light_red;
 	&:hover {
@@ -26,7 +26,7 @@
 	}
 }
 .warning {
-	@extend .interface;
+	@extend .interface_tile;
 	color: $dark_blue;
 	background-color: $light_green;
 	&:hover {
@@ -156,21 +156,29 @@
 				}
 			}
 		}
+	}
+	#showMessage, #toDoList {
+		color: $light_black;
+
+		.strike {
+	    text-decoration: line-through;
+	    color: $light_red;
+		}
+
 	}	
 	.general {
 		background-color: $purple;
 		display: flex;
 		flex-wrap: wrap;
 	
-		.square {
-		width: 30%;
-		}
-		#clickerInput {
-			
-		}
-		#clickerButton {
-			
+	}
+	#showMessage, #newClicker, #toDoList {
+	@extend .interface_by_Vue;
+	}
+	#toDoList {
+		ul {
+			list-style: none;
+			margin-left: 20px;
 		}
 	}
-
 }

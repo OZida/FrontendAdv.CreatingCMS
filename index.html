@@ -46,13 +46,27 @@
 					<a href="#"><img src="./static/img/4-engeen.png"></a>
 				</div>	
 			</div>
-			<div id="app">
+			<div id="showMessage">
 				<p>{{ message }}</p>
 				<input type="text" v-model='message'>
 			</div>
-			<div id="app1">
+			<div id="newClicker">
 				<input type="text" v-model='text'>
 				<button v-on:click='clickMe'>click me</button>
+			</div>
+			<div id="toDoList">
+				
+				<message @message-saved="handleMessage"></message>
+
+				<ul>
+					<li v-for='list in lists'  
+						v-bind:class="{strike: list.isDone}">{{list.text}} 
+						<input type="checkbox" v-model="list.isDone"></li>
+					<li v-for='message in newLists'
+						v-bind:class="{strike: message.completed}">
+						{{message.text}}
+						<input type="checkbox" v-model="message.completed"></li>
+				</ul>
 			</div>	
 			<div class="general"></div>
 			<div class="general_1">
