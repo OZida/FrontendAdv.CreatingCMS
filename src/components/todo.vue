@@ -1,7 +1,9 @@
 <template>
 	<div id="toDoList">
 				
-		<message @message-saved="handleMessage"></message>
+		<div @message-saved="handleMessage">
+			<input v-model="message" @keyup.enter="saveMessage">
+		</div>
 
 		<ul>
 			<li v-for='list in lists'  
@@ -19,6 +21,7 @@
 	export default {
 		data: function() {
 			return {
+				message: '',
 				lists: [
 				{text:'сделать домашнее задание',
 				isDone: false
@@ -37,16 +40,22 @@
 				}
 			},
 			methods: {
+				saveMessage: function() {
+					this.$emit('message-saved', this.message);
+					this.message = '';
+				},
 				handleMessage: function(message) {
-
 					this.newLists.push({text: message, completed: false});
-					console.log(this.newLists);
-						}
 				}
+			}
 		}
 </script>
 
-<style>
+<style lang='scss' scoped> 
+
+@import '../styles/_reset.scss';
+@import '../styles/_var.scss';
+
 	#toDoList {
 		@extend .interface_by_Vue;
 		

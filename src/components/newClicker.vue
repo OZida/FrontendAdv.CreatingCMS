@@ -31,7 +31,11 @@
 </script>
 
 
-<style>
+<style lang='scss' scoped> 
+
+@import '../styles/_reset.scss';
+@import '../styles/_var.scss';
+
 	#newClicker {
 		@extend .interface_by_Vue;
 	}	

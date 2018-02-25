@@ -19,4 +19,4 @@ let input = document.getElementById('clickerInput'),
 		}
 	}
 button.onclick = game.start;
-fetch('https://jsonplaceholder.typicode.com/posts/1').then((r)=>r.json()).then(j=>console.log(j));
+// fetch('https://jsonplaceholder.typicode.com/posts/1').then((r)=>r.json()).then(j=>console.log(j));
