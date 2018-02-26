@@ -41,15 +41,16 @@
 @import '../styles/_reset.scss';
 @import '../styles/_var.scss';
 
-/*@font-face {
-	font-family: Roboto;
-	src: url(../static/fonts/Roboto-Bold.ttf);
+@font-face {
+	font-family: 'Roboto';
+	font-weight: bolder;
+	src: url('../../build/static/fonts/Roboto-Bold.ttf');
 }
 @font-face {
-	font-family: Roboto-Regular;
-	src: url(../static/fonts/Roboto-Regular.ttf);
+	font-family: 'Roboto-Regular';
+	src: url('../../build/static/fonts/Roboto-Regular.ttf');
 }
-*/
+
 	#questionary {
 		background: url('https://demiart.ru/forum/uploads1/post-76674-1222088222.jpg') no-repeat;
 		background-size: cover;
@@ -67,6 +68,7 @@
 				margin: 20% 0 10% 35%;
 			}
 			p {
+				font-family: 'Roboto-Regular';
 				width: 280px;
 				margin-left: 30%;
 				line-height: 30px;
@@ -77,10 +79,11 @@
 			padding-left: 5%;
 
 			h3 {
-				font-family: Roboto;
+				font-family: 'Roboto';
 				text-align: center;
 			}
 			p {
+				font-family: 'Roboto-Regular';
 				text-indent: 2em;
 				text-align: justify;
 				margin: 0;

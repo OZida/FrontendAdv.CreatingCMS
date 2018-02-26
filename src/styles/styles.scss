@@ -157,28 +157,10 @@
 			}
 		}
 	}
-	#showMessage, #toDoList {
-		color: $light_black;
-
-		.strike {
-	    text-decoration: line-through;
-	    color: $light_red;
-		}
-
-	}	
 	.general {
 		background-color: $purple;
 		display: flex;
 		flex-wrap: wrap;
 	
 	}
-/*	#showMess, #newClicker, #toDoList{
-	@extend .interface_by_Vue;
-	}
-	#toDoList {
-		ul {
-			list-style: none;
-			margin-left: 20px;
-		}
-	}*/
 }

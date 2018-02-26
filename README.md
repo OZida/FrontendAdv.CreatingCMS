@@ -1,2 +1,6 @@
-# FrontendAdv.CreatingCMSandContent
-educational project
+1.Название проэкта: FrontendAdv.CreatingCMSandContent (educational project)
+2.Запуск: с помощью консоли git Bush в выбранной директории, командой git clone вставить ссылку на даный проэкт, которую нужно скопировать на сайте Git hub этого проэкта;
+ в консоли перейти в папку скачаного проэкта и прописать команду "npm i";
+ с помощью команды "npm run dev" запустить проэкт в браузереж
+3.Описание
+4.Архитектура: при разработке проэкта были использованы: webpack, pug, препроцессор scss

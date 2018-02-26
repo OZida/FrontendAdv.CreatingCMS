@@ -1,8 +1,8 @@
 <template>
-	<div id="toDoList">
+	<div id="todo">
 				
 		<message @message-saved="handleMessage"></message>
-
+		
 		<ul>
 			<li v-for='list in lists'  
 				v-bind:class="{strike: list.isDone}">{{list.text}} 
@@ -19,6 +19,7 @@
 	export default {
 		data: function() {
 			return {
+
 				lists: [
 				{text:'сделать домашнее задание',
 				isDone: false
@@ -49,12 +50,17 @@
 @import '../styles/_reset.scss';
 @import '../styles/_var.scss';
 
-	#toDoList {
+	#todo {
 		@extend .interface_by_Vue;
+		color: $light_black;
 		
 		ul {
 			list-style: none;
 			margin-left: 20px;
+		}
+		.strike {
+	    text-decoration: line-through;
+	    color: $light_red;
 		}
 	}
 </style>
