@@ -6,8 +6,6 @@
 		div.right_questionary
 			h3 {{title}}
 			p(v-for='citation in citations') {{citation}}
-			div
-			div
 </template>			
 		
 
@@ -50,8 +48,8 @@
 @font-face {
 	font-family: Roboto-Regular;
 	src: url(../static/fonts/Roboto-Regular.ttf);
-}*/
-
+}
+*/
 	#questionary {
 		background: url('https://demiart.ru/forum/uploads1/post-76674-1222088222.jpg') no-repeat;
 		background-size: cover;
@@ -79,7 +77,7 @@
 			padding-left: 5%;
 
 			h3 {
-				/*font-family: Roboto;*/
+				font-family: Roboto;
 				text-align: center;
 			}
 			p {

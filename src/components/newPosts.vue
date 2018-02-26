@@ -1,6 +1,6 @@
 <template>
-	<div>
-		<div v-for="post in posts">
+	<div id="new_posts">
+		<div class='new_posts_item' v-for="post in posts">
 			<h3>{{ post.title }}</h3>
 			<p>{{ post.body }}</p>
 		</div>
@@ -12,18 +12,11 @@
 export default {
   data () {
     return {
-      // endpoint: 'https://jsonplaceholder.typicode.com/posts',
       posts: []
     }
   },
-  // methods: {
-  //   handlePosts: function() {
-  //     this.$http.get(this.endpoint).then(json => {this.posts = json.data});
-  //   }
-  // },
   created: function() {
-    // this.handlePosts();
-    fetch('https://jsonplaceholder.typicode.com/posts').then((r) => r.json()).then(json => {this.posts = json.data});
+    fetch('https://jsonplaceholder.typicode.com/posts').then((r) => r.json()).then(json => {this.posts = json});
     // fetch('https://jsonplaceholder.typicode.com/posts').then((r) => r.json()).then(json => console.log(json));          //чтоб вывести в консоль
   }
 }
@@ -33,5 +26,23 @@ export default {
 
 @import '../styles/_reset.scss';
 @import '../styles/_var.scss';
-	
+
+	#new_posts {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		background-color: $purple;
+		
+		.new_posts_item {
+			@extend .interface_tile;
+			border-radius: 10px;
+			background-color: $light_purple;
+			color: $dark_violet;
+
+			h3 {
+				text-align: center;
+				font-weight: bolder;
+			}
+		}
+	}	
 </style>
