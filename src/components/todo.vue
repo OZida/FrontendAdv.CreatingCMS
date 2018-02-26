@@ -1,8 +1,8 @@
 <template>
 	<div id="todo">
 				
-		<message @message-saved="handleMessage"></message>
 		
+		<input v-model="message" @keyup.enter="saveMessage">
 		<ul>
 			<li v-for='list in lists'  
 				v-bind:class="{strike: list.isDone}">{{list.text}} 
@@ -19,7 +19,7 @@
 	export default {
 		data: function() {
 			return {
-
+				message: '',
 				lists: [
 				{text:'сделать домашнее задание',
 				isDone: false
@@ -39,7 +39,11 @@
 			},
 			methods: {
 				handleMessage: function(message) {
-					this.newLists.push({text: message, completed: false});
+					// this.newLists.push({text: message, completed: false});
+				},
+				saveMessage: function() {
+					this.newLists.push({text: this.message, completed: false});
+					this.message = '';
 				}
 			}
 		}
