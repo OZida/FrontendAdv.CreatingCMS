@@ -1,8 +1,6 @@
-![dive into frontend](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTir2FP_TvsEbNkLjbdxoX9o3oiPkeHxAAZcivT7LEWH1VVoHrkImh0pDg))
-
 # FrontendAdv.CreatingCMSandContent
 
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
+![dive into frontend](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTir2FP_TvsEbNkLjbdxoX9o3oiPkeHxAAZcivT7LEWH1VVoHrkImh0pDg)
 
 ### Начало работы.
 
@@ -48,6 +46,7 @@ $ npm run dev
 | HtmlWebpackPlugin | генерирует HTML - файл, который использует в себе webpack-связи, используя теги скриптов |
 | CopyWebpackPlugin | копирует отдельные файлы или папки целиком в указанную дерикторию |
 И загрузчики:
+
 | Загрузчик | Назначение |
 | ------ | ------ |
 | style-loader| нужен для ввалидной работы webpack с css |
