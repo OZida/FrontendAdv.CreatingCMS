@@ -157,10 +157,26 @@
 			}
 		}
 	}
-	.general {
+	.byRouter {
+		text-align: center;
+
+		a {
+			text-decoration: none;
+			color: $light_purple;
+			font-size: 18px;
+			margin: 0 30px 20px 0;
+
+
+			&:hover {
+				color: $white_purple;
+				transition: 0.5s all ease;
+			}
+		}
+	}
+/*	.general {
 		background-color: $purple;
 		display: flex;
 		flex-wrap: wrap;
 	
-	}
+	}*/
 }

@@ -44,21 +44,22 @@
 @font-face {
 	font-family: 'Roboto';
 	font-weight: bolder;
-	src: url('../../build/static/fonts/Roboto-Bold.ttf');
+	src: url('~fonts/Roboto-Bold');
 }
 @font-face {
 	font-family: 'Roboto-Regular';
-	src: url('../../build/static/fonts/Roboto-Regular.ttf');
+	src: url('~fonts/Roboto-Regular');
 }
 
 	#questionary {
+		margin-top: 40px;
 		background: url('https://demiart.ru/forum/uploads1/post-76674-1222088222.jpg') no-repeat;
 		background-size: cover;
 		background-position: center;
 		height: 900px;
 		display: flex;
 		justify-content: center;
-		padding-top: 5%;
+		padding-top: 3%;
 
 		.left_questionary{
 			flex-basis: 40%;
@@ -84,6 +85,7 @@
 			}
 			p {
 				font-family: 'Roboto-Regular';
+				font-size: 14px;
 				text-indent: 2em;
 				text-align: justify;
 				margin: 0;
