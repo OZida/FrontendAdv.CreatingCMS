@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import './styles/styles';
+import PIXI from 'pixi.js/dist/pixi.min';
 import Vue from 'vue/dist/vue.min';
 import todo from './components/todo';
 import newClicker from './components/newClicker';
