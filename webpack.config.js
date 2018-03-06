@@ -112,7 +112,7 @@ module.exports = {
 		new webpack.HotModuleReplacementPlugin(),
 		new HtmlWebpackPlugin({template:'./index.html'}),
 		new CopyWebpackPlugin([
-			{ from: 'img/*.*'},
+			{ from: 'static/img/*.*'},
 			// { from: 'fonts/*.*'}
 			])
 	]
