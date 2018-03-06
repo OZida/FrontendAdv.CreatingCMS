@@ -1,3 +1,6 @@
 /node_modules/
-build/
-!.txt
+/build/*.js
+/build/*.html
+/build/*.ttf
+/build/*static
+/build/!.txt
