@@ -37,11 +37,15 @@
 	    // console.log(newApp)
 	    let cat, state, dungeon, treasure, door, blobs, gameScene, message, gameOverScene;
 
-		loader.add(["../static/img/cat.png",
-					"../static/img/treasure.png",
-					"../static/img/door.png",
-					"../static/img/blob.png"]).load(setup);
-
+	    try {
+			loader.add(["../static/img/cat.png",
+						"../static/img/treasure.png",
+						"../static/img/door.png",
+						"../static/img/blob.png"]).load(setup);
+		}
+		catch(e) {
+			loader.load(setup);
+		}
 		function keyboard(keyCode) {
 			let key = {};
 			key.code = keyCode;
