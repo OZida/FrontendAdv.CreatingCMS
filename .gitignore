@@ -2,4 +2,4 @@
 /build/*.js
 /build/*.html
 /build/*.ttf
-/build/static/
+/build/*/static/
