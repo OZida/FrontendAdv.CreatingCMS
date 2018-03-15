@@ -1,5 +1,6 @@
 @import '_reset.scss';
 @import '_var.scss';
+@import '_adaptiv.scss';
 
 .message {
 	@extend .interface_tile;
@@ -33,8 +34,6 @@
 		background-color: $light_blue;
 	}
 }
-
-
 
 
 .content {

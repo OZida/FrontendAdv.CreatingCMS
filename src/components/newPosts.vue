@@ -1,5 +1,6 @@
 <template>
 	<div id="new_posts">
+		<h2>New Posts</h2>
 		<div class='new_posts_item' v-for="post in posts">
 			<h3>{{ post.title }}</h3>
 			<p>{{ post.body }}</p>
@@ -34,6 +35,9 @@ export default {
 		justify-content: space-around;
 		background-color: $purple;
 		
+		h2 {
+			display: none;
+		}
 		.new_posts_item {
 			@extend .interface_tile;
 			border-radius: 10px;
@@ -45,5 +49,43 @@ export default {
 				font-weight: bolder;
 			}
 		}
-	}	
+	}
+
+	@media print {
+
+	#adaptiv {
+
+		#new_posts {
+			margin-top: 40px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			background-color: none;	
+
+			h2 {
+				display: block;
+				text-align: center;
+			}
+			.new_posts_item {
+				/*height: 17%;*/
+				width: 100%;
+				background-color: none;
+				color: $dark_black;
+				margin: 5px;
+				padding: 5px;
+
+				h3 {
+					margin: 0;
+					text-align: center;
+					font-weight: bolder;
+				}
+				p {
+					text-align: left;
+					/*margin-top: 5px*/;
+					margin: 0;
+				}
+			}
+		}
+	}
+}	
 </style>

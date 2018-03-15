@@ -1,0 +1,15 @@
+@media print {
+
+	#adaptiv {
+
+		.left_content, .main_nav, #newClicker, #todo, #pugTest, #questionary, #newDrow {
+			display: none;
+		}
+		.byRouter {
+			
+			a{
+				display: none;
+			}
+		}
+	}
+}
