@@ -16,8 +16,8 @@ import router from './router';
 new Vue ({
 	router,
 	el:'#app',
-	template: `<div class='byRouter'> <router-link to="/">Главная</router-link> 
-					<router-link to="/todo">Список дел</router-link>
+	template: `<div class='byRouter'> <router-link to="/">clicker</router-link> 
+					<router-link to="/todo">toDoList</router-link>
 					<router-link to="/pugTest">pugTest</router-link>
 					<router-link to="/profile">profile</router-link>
 					<router-link to="/newPosts">newPosts</router-link>

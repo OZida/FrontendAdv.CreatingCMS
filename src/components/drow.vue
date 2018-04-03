@@ -1,5 +1,6 @@
 <template>
 	<div id="newDrow">
+		<p>If you want to win you must grab the treasure and bring it to the door. Use the arrows on the keyboard.</p>
 		<canvas ref="renderCanvas"></canvas>
 	</div>
 	

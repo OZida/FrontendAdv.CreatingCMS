@@ -29,7 +29,9 @@ export default {
 @import '../styles/_var.scss';
 
 	#new_posts {
-		margin-top: 40px;
+		border: 2px solid $light_black;
+		margin-top: 30px;
+		padding: 10px 0;	
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-around;

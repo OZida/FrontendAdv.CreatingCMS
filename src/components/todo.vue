@@ -1,16 +1,18 @@
 <template>
 	<div id="todo">
-				
-		
-		<input v-model="message" @keyup.enter="saveMessage">
+		<p>Put a mark on the implementation. If you want to add tasks - write in the field and press Enter.</p>
+		<input type="text" v-model="message" @keyup.enter="saveMessage">
 		<ul>
 			<li v-for='list in lists'  
-				v-bind:class="{strike: list.isDone}">{{list.text}} 
-				<input type="checkbox" v-model="list.isDone"></li>
+				v-bind:class="{strike: list.isDone}">
+				{{list.text}} 
+				<input type="checkbox" name="todoList" v-model="list.isDone">
+			</li>
 			<li v-for='message in newLists'
 				v-bind:class="{strike: message.completed}">
 				{{message.text}}
-				<input type="checkbox" v-model="message.completed"></li>
+				<input type="checkbox" v-model="message.completed">
+			</li>
 		</ul>
 	</div>
 </template>
@@ -21,16 +23,16 @@
 			return {
 				message: '',
 				lists: [
-				{text:'сделать домашнее задание',
+				{text:'do homework',
 				isDone: false
 				},
-				{text:'приготовить ужин',
+				{text:'make dinner',
 				isDone: false
 				},	
-				{text:'убрать в квартире',
+				{text:'clean in the apartment',
 				isDone: false
 				},		
-				{text:'посмотреть фильм',
+				{text:'watch a film',
 				isDone: false
 				}
 				],
@@ -57,10 +59,29 @@
 	#todo {
 		@extend .interface_by_Vue;
 		color: $light_black;
-		
+
+		input[type='text'] {
+			margin: 20px 0;
+			text-align: center;
+			background-color: $light_purple;
+			color: $dark_purple;
+			height: 20px;
+			border: 1px solid $light_purple;
+			font-size: 18px;
+			&:focus {
+			outline: none;
+			}
+		}
 		ul {
 			list-style: none;
 			margin-left: 20px;
+			color: $light_purple;
+
+			input[type='checkbox'] {
+				width: 20px;
+				height: 20px;
+				cursor: pointer;
+			}
 		}
 		.strike {
 	    text-decoration: line-through;
